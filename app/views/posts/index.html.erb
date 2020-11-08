@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>posts</h1>
+
+
+<div id="listContainer">
+    <%= render 'post' %>   
+</div>
+
+<br />
+<div id="newPost">
+    <%= render 'form', object: @post %>   
+</div>
+
+<div id="showPost">
+    <div id="postDiv">
+    </div>
+    <div>
+      <span class="close">[close]</span>
+    </div>
+</div>
+
+<%= link_to 'New Post', new_post_path %>

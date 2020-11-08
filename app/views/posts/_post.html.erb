@@ -1,0 +1,18 @@
+<table>
+    <tr>
+      <th>title</th>
+      <th>content</th>
+      <th></th>
+      <th></th>
+    </tr>
+  
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.contitle %></td>
+      <td><span class="showPost" postid="<%= post.id %>">Show</span></td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'delete_post' %></td>
+    </tr>
+  <% end %>
+  </table>
